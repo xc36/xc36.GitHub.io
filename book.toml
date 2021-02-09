@@ -5,5 +5,8 @@ multilingual = false
 src = "src"
 title = "xc and jackie"
 
+[build]
+build-dir = "book"
+
 [output.html]
 mathjax-support = true
