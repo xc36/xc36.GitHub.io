@@ -1,0 +1,6 @@
+[book]
+authors = ["xc"]
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "xc and jackie"
