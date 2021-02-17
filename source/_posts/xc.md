@@ -1,9 +1,6 @@
 ---
 title: xc
-date: 2021-02-09 14:08:46
-tags: xcxcxcxcxcx
-cxcxcxcxcxcxcxcx
-$\alpha$
-$\beta$
+date: 2021-02-17 18:31:41
+tags:
 ---
-.......
+qaq
