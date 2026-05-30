@@ -252,7 +252,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-05-30 17:30:51 / 修改时间：17:54:14" itemprop="dateCreated datePublished" datetime="2026-05-30T17:30:51+08:00">2026-05-30</time>
+      <time title="创建时间：2026-05-30 17:30:51 / 修改时间：17:58:08" itemprop="dateCreated datePublished" datetime="2026-05-30T17:30:51+08:00">2026-05-30</time>
     </span>
 
   
@@ -269,31 +269,61 @@
 <p>这种引入概率含义的证明，在Weierstrass逼近定理中见过。之前讨论群提到一本书对这种方法做归纳，翻了翻找不到书名了。</p>
 <p>想起几年前初读这个不等式，学的证明一种是反向归纳法，另一种是正常的归纳法。感觉两种都难以想到，像是试出来的。</p>
 <hr>
-<p>设 (x<em>1,x_2,\ldots,x_n) 为正数。定义三种平均数：<br>[<br>A=\frac{1}{n}\sum</em>{i=1}^n x<em>i,<br>\qquad<br>G=\left(\prod</em>{i=1}^n x<em>i\right)^{1/n},<br>\qquad<br>H=\frac{n}{\sum</em>{i=1}^n \frac{1}{x_i}}.<br>]</p>
-<p>我们要证明：</p>
-<p>[<br>H\leq G\leq A.<br>]</p>
-<p>等号成立当且仅当</p>
-<p>[<br>x_1=x_2=\cdots=x_n.<br>]</p>
-<hr>
-<p>我们考虑<br>[<br>Y_i \sim \mathrm{Exp}(\lambda_i)<br>\qquad<br>H_0:\lambda_1=\lambda_2=…=\lambda_n \ v.s. \ H_1:\lambda_i不全相等<br>]</p>
-<h2 id="一、证明-G-leq-A"><a href="#一、证明-G-leq-A" class="headerlink" title="一、证明 (G\leq A)"></a>一、证明 (G\leq A)</h2><p>[<br>\overline y=\frac{1}{n}\sum_{i=1}^n y_i.<br>]</p>
-<p>全参数空间下：</p>
-<p>[<br>L(\lambda<em>1,\ldots,\lambda_n)<br>=<br>\prod</em>{i=1}^n \lambda_i e^{-\lambda_i y_i}.<br>]</p>
-<p>此时最大似然估计为</p>
-<p>[<br>\widehat\lambda_i=\frac{1}{y_i}.<br>]</p>
-<p>$H_0$下 ：</p>
-<p>[<br>L<em>0(\lambda)<br>=<br>\lambda^n e^{-\lambda\sum</em>{i=1}^n y_i},<br>]</p>
-<p>其最大似然估计为</p>
-<p>[<br>\widehat\lambda=\frac{1}{\overline y}.<br>]</p>
-<p>因此，相应的似然比为<br>[<br>\Lambda<br>=<br>\frac{\sup L<em>0}{\sup L}<br>=<br>\frac{\left(\frac{1}{\overline y}\right)^n e^{-n}}<br>{\prod</em>{i=1}^n \left(\frac{1}{y<em>i}\right)e^{-1}}<br>=<br>\frac{\prod</em>{i=1}^n y_i}{\overline y^{\,n}}<br>]<br>熟知<br>[<br>\Lambda\leq 1.<br>]<br>于是<br>[<br>G\leq A.<br>]</p>
-<hr>
+<p>设 (x_1,x_2,\ldots,x_n) 为正数。定义三种平均数：</p>
+<script type="math/tex; mode=display">
+A=\frac{1}{n}\sum_{i=1}^n x_i,
+\qquad
+G=\left(\prod_{i=1}^n x_i\right)^{1/n},
+\qquad
+H=\frac{n}{\sum_{i=1}^n \frac{1}{x_i}}.</script><p>我们要证明：</p>
+<script type="math/tex; mode=display">
+H\leq G\leq A.</script><p>等号成立当且仅当</p>
+<script type="math/tex; mode=display">
+x_1=x_2=\cdots=x_n.</script><hr>
+<p>我们考虑</p>
+<script type="math/tex; mode=display">
+Y_i \sim \mathrm{Exp}(\lambda_i) 
+\qquad
+H_0:\lambda_1=\lambda_2=...=\lambda_n \ v.s. \ H_1:\lambda_i不全相等</script><h2 id="一、证明-G-leq-A"><a href="#一、证明-G-leq-A" class="headerlink" title="一、证明 (G\leq A)"></a>一、证明 (G\leq A)</h2><script type="math/tex; mode=display">
+\overline y=\frac{1}{n}\sum_{i=1}^n y_i.</script><p>全参数空间下：</p>
+<script type="math/tex; mode=display">
+L(\lambda_1,\ldots,\lambda_n)
+=
+\prod_{i=1}^n \lambda_i e^{-\lambda_i y_i}.</script><p>此时最大似然估计为</p>
+<script type="math/tex; mode=display">
+\widehat\lambda_i=\frac{1}{y_i}.</script><p>$H_0$下 ：</p>
+<script type="math/tex; mode=display">
+L_0(\lambda)
+=
+\lambda^n e^{-\lambda\sum_{i=1}^n y_i},</script><p>其最大似然估计为</p>
+<script type="math/tex; mode=display">
+\widehat\lambda=\frac{1}{\overline y}.</script><p>因此，相应的似然比为</p>
+<script type="math/tex; mode=display">
+\Lambda
+=
+\frac{\sup L_0}{\sup L}
+=
+\frac{\left(\frac{1}{\overline y}\right)^n e^{-n}}
+{\prod_{i=1}^n \left(\frac{1}{y_i}\right)e^{-1}}
+=
+\frac{\prod_{i=1}^n y_i}{\overline y^{\,n}}
+\]
+熟知
+\[
+\Lambda\leq 1.
+\]
+于是
+\[
+G\leq A.</script><hr>
 <h2 id="二、证明-H-leq-G"><a href="#二、证明-H-leq-G" class="headerlink" title="二、证明 (H\leq G)"></a>二、证明 (H\leq G)</h2><p>现在把上面已经证明的结果应用到倒数</p>
-<p>[<br>\frac{1}{x_1},\frac{1}{x_2},\ldots,\frac{1}{x_n}.<br>]</p>
-<p>有</p>
-<p>[<br>\left(\prod<em>{i=1}^n \frac{1}{x_i}\right)^{1/n}<br>\leq<br>\frac{1}{n}\sum</em>{i=1}^n \frac{1}{x_i}.<br>]</p>
-<p>化简即可得到</p>
-<p>[<br>H\leq G.<br>]</p>
-
+<script type="math/tex; mode=display">
+\frac{1}{x_1},\frac{1}{x_2},\ldots,\frac{1}{x_n}.</script><p>有</p>
+<script type="math/tex; mode=display">
+\left(\prod_{i=1}^n \frac{1}{x_i}\right)^{1/n}
+\leq
+\frac{1}{n}\sum_{i=1}^n \frac{1}{x_i}.</script><p>化简即可得到</p>
+<script type="math/tex; mode=display">
+H\leq G.</script>
       
     </div>
 
